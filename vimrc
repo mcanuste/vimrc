@@ -7,4 +7,9 @@ Plug 'liuchengxu/vista.vim'
 Plug 'jeetsukumaran/vim-pythonsense'
 Plug 'jiangmiao/auto-pairs'
 Plug 'sheerun/vim-polyglot'
-call plug#end()
+call plug#end()   
+
+source ~/.vim/default.vim
+source ~/.vim/visuals.vim
+
+source ~/.vim/nerdtree.vim
