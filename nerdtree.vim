@@ -1,18 +1,13 @@
-"ignore files in NERDTree
-let NERDTreeIgnore=['\.pyc$', '\~$'] 
+let g:NERDTreeShowHidden = 1
+let g:NERDTreeMinimalUI = 1
+let g:NERDTreeIgnore = []
+let g:NERDTreeStatusline = ''
 
-"KEY BINDINGS
-map <C-n> :NERDTreeToggle<CR>
+" Automaticaly close nvim if NERDTree is only thing left open
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-" NT AUTOMATIC SETTINGS
-autocmd StdinReadPre * let s:std_in=1
+" Toggle
+nnoremap <silent> <C-b> :NERDTreeToggle<CR>
 
-"open nt automatically when vim started with vim .
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-
-"don't open nt on saved sessions
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") && v:this_session == "" | NERDTree | endif
-
-"automatically open nt when vim opens a folder
-autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
-
+" Git plugin
+let g:NERDTreeGitStatusUseNerdFonts = 1
