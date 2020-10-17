@@ -2,12 +2,16 @@ set encoding=utf-8
 
 "line numbers
 set nu
+set nobackup
+set noswapfile
 
 "system clipboard
-set clipboard=unnamed
+set clipboard=unnamedplus
 
 "incremental search
 set incsearch
+set ignorecase
+set wrapscan " begin search from top of file when nothing is found anymore
 
 " Use <C-L> to clear the highlighting of :set hlsearch.
 if maparg('<C-L>', 'n') ==# ''
@@ -22,6 +26,8 @@ set autoindent
 set backspace=indent,eol,start
 set complete-=i
 set smarttab
+set nofoldenable
+set breakindent
 
 "number format
 set nrformats-=octal
@@ -30,6 +36,10 @@ set nrformats-=octal
 set laststatus=2
 set ruler
 set wildmenu
+
+" open new split panes to right and below
+set splitright
+set splitbelow
 
 "turnoff scroll
 if !&scrolloff
@@ -82,12 +92,15 @@ endif
 if &history < 1000
   set history=1000
 endif
+
 if &tabpagemax < 50
   set tabpagemax=50
 endif
+
 if !empty(&viminfo)
   set viminfo^=!
 endif
+
 set sessionoptions-=options
 set viewoptions-=options
 
