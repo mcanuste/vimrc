@@ -1,21 +1,26 @@
+" Gives Vim access to a broader range of colours
 set termguicolors
-syntax enable
 
-" Dracula theme
-command Dracula :colorscheme dracula
+" Allow color schemes to do bright colors without forcing bold.
+if &t_Co == 8 && $TERM !~# '^Eterm'
+  set t_Co=16
+endif
+
+" " Dracula theme
+command! ThemeDracu :colorscheme dracula
 
 " Ayu Theme
-command Ayulight :let ayucolor="light" | colorscheme ayu " for light version of theme
-command Ayumirage :let ayucolor="mirage" | colorscheme ayu " for light version of theme
-command Ayudark :let ayucolor="dark" | colorscheme ayu " for light version of theme
+command! ThemeAyulight :let ayucolor="light" | colorscheme ayu " for light version of theme
+command! ThemeAyumirage :let ayucolor="mirage" | colorscheme ayu " for light version of theme
+command! ThemeAyudark :let ayucolor="dark" | colorscheme ayu " for light version of theme
 
 " Nord Theme
-command Nord :colorscheme nord
+command! ThemeNord :colorscheme nord
 
 " Default color scheme
-colorscheme nord
+colorscheme dracula
 
-" Lightline setuo
+" Lightline setup
 let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ 'active': {

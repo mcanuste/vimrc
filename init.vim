@@ -1,4 +1,6 @@
-syntax on
+source ~/.config/nvim/global.vim
+source ~/.config/nvim/keybindings.vim
+
 call plug#begin('~/.vim/plugged')
 
 " Theme & Basic Usage
@@ -18,7 +20,7 @@ Plug 'ryanoasis/vim-devicons'
 
 " Utils
 Plug 'tpope/vim-commentary' " Commenting with gcc and gc..
-Plug 'AndrewRadev/splitjoin.vim' " Split one liner to multi line
+" Plug 'AndrewRadev/splitjoin.vim' " Split one liner to multi line
 
 " Searching
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -40,23 +42,26 @@ Plug 'tpope/vim-fugitive'
 " COC
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-" LSP Symbol search/view
-"Plug 'liuchengxu/vista.vim'
+" Markdown
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 
-" Typescript and TSX
-"Plug 'leafgarland/typescript-vim'
-"Plug 'peitalin/vim-jsx-typescript'
+" Latex
+Plug 'lervag/vimtex'
 
-" Python
-"Plug 'Vimjas/vim-python-pep8-indent'
-"Plug 'vim-python/python-syntax'
-" Plug 'jeetsukumaran/vim-pythonsense'
-" Plug 'sheerun/vim-polyglot'
+" Snippets
+Plug 'sirver/ultisnips'
+
 call plug#end()   
 
 source ~/.config/nvim/theme.vim
-source ~/.config/nvim/terminal.vim
 source ~/.config/nvim/nerdtree.vim
+source ~/.config/nvim/terminal.vim
 source ~/.config/nvim/fzf.vim
+
+source ~/.config/nvim/markdown.vim
+source ~/.config/nvim/latex.vim
+source ~/.config/nvim/snippets.vim
 source ~/.config/nvim/coc.vim
-source ~/.config/nvim/default.vim
+
