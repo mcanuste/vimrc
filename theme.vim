@@ -10,12 +10,12 @@ endif
 command! ThemeDracu :colorscheme dracula
 
 " Ayu Theme
-command! ThemeAyulight :let ayucolor="light" | colorscheme ayu " for light version of theme
-command! ThemeAyumirage :let ayucolor="mirage" | colorscheme ayu " for light version of theme
-command! ThemeAyudark :let ayucolor="dark" | colorscheme ayu " for light version of theme
+"command! ThemeAyulight :let ayucolor="light" | colorscheme ayu " for light version of theme
+"command! ThemeAyumirage :let ayucolor="mirage" | colorscheme ayu " for light version of theme
+"command! ThemeAyudark :let ayucolor="dark" | colorscheme ayu " for light version of theme
 
 " Nord Theme
-command! ThemeNord :colorscheme nord
+"command! ThemeNord :colorscheme nord
 
 " Default color scheme
 colorscheme dracula

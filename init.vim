@@ -5,10 +5,10 @@ call plug#begin('~/.vim/plugged')
 
 " Theme & Basic Usage
 Plug 'dracula/vim'
-Plug 'ayu-theme/ayu-vim'
-Plug 'arcticicestudio/nord-vim'
-Plug 'mhinz/vim-startify'
-Plug 'psliwka/vim-smoothie'
+"Plug 'ayu-theme/ayu-vim'
+"Plug 'arcticicestudio/nord-vim'
+"Plug 'mhinz/vim-startify'
+"Plug 'psliwka/vim-smoothie'
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
@@ -28,7 +28,7 @@ Plug 'junegunn/fzf.vim'
 
 " Automatically create pairs
 Plug 'jiangmiao/auto-pairs'
-Plug 'machakann/vim-sandwich'
+"Plug 'machakann/vim-sandwich'
 
 " Automated indendation style
 Plug 'tpope/vim-sleuth'
@@ -40,7 +40,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-fugitive'
 
 " COC
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Markdown
 Plug 'godlygeek/tabular'
@@ -63,5 +63,5 @@ source ~/.config/nvim/fzf.vim
 source ~/.config/nvim/markdown.vim
 source ~/.config/nvim/latex.vim
 source ~/.config/nvim/snippets.vim
-source ~/.config/nvim/coc.vim
+"source ~/.config/nvim/coc.vim
 
